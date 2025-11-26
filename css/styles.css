@@ -517,3 +517,124 @@ ul {
         font-size: 1.25rem;
     }
 }
+
+/* ============================================== */
+/* EDUCATION SECTION STYLES */
+/* Estilos de la Sección EDUCACIÓN */
+
+.education__container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.education__subtitle {
+    font-size: 1.8rem;
+    color: var(--clr-primary);
+    margin: 3rem 0 1.5rem 0;
+    border-bottom: 2px solid var(--clr-border);
+    padding-bottom: 0.5rem;
+}
+
+/* Education Cards (Grid/List) */
+.education__grid {
+    display: flex;
+    flex-direction: column; /* Stacked layout for clarity */
+    gap: 1.5rem;
+}
+
+.edu__card {
+    background-color: var(--clr-card-dark);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--clr-secondary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.edu__card:hover {
+    background-color: var(--clr-border); /* Slightly lighter background on hover */
+}
+
+.edu__program {
+    font-size: 1.3rem;
+    color: var(--clr-text-dark);
+    margin-bottom: 0.25rem;
+}
+
+.edu__institution {
+    display: block;
+    font-size: 1rem;
+    color: var(--clr-primary);
+    font-weight: 500;
+}
+
+.edu__date {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--clr-text-secondary);
+    margin-bottom: 1rem;
+}
+
+.edu__description {
+    color: var(--clr-text-dark);
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.edu__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Certifications List Styles */
+.certifications__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cert__item {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem;
+    border: 1px solid var(--clr-border);
+    border-radius: 8px;
+    background-color: var(--clr-card-dark);
+    transition: border-color 0.3s;
+}
+
+.cert__item:hover {
+    border-color: var(--clr-primary);
+}
+
+.cert__icon {
+    font-size: 1.5rem;
+    color: var(--clr-secondary);
+    margin-right: 1rem;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.cert__title {
+    font-size: 1.1rem;
+    color: var(--clr-primary);
+    margin-bottom: 0.25rem;
+}
+
+.cert__description {
+    font-size: 0.95rem;
+    color: var(--clr-text-secondary);
+    text-align: justify;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .education__subtitle {
+        font-size: 1.5rem;
+    }
+    .edu__card, .cert__item {
+        padding: 1rem;
+    }
+}
