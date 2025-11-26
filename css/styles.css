@@ -250,3 +250,182 @@ ul {
         margin-bottom: 2rem;
     }
 }
+
+/* ============================================== */
+/* HERO SECTION STYLES */
+/* Estilos de la Sección HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(100vh - 80px); /* Full height minus header height */
+    gap: 3rem;
+}
+
+.hero__content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero__intro {
+    font-size: 1.25rem;
+    color: var(--clr-primary);
+    margin-bottom: 0.5rem;
+}
+
+.hero__title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    color: var(--clr-text-dark);
+}
+
+.highlight {
+    color: var(--clr-primary);
+    /* Subtle neon effect */
+    /* Efecto neón sutil */
+    text-shadow: 0 0 5px rgba(89, 208, 244, 0.5); 
+}
+
+.hero__descriptor {
+    font-size: 1.5rem;
+    color: var(--clr-text-secondary);
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.hero__cta-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.cta-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+.primary-cta {
+    background-color: var(--clr-primary);
+    color: var(--clr-bg-dark);
+    border: 2px solid var(--clr-primary);
+}
+
+.primary-cta:hover {
+    background-color: var(--clr-secondary);
+    border-color: var(--clr-secondary);
+}
+
+.secondary-cta {
+    background: none;
+    color: var(--clr-primary);
+    border: 2px solid var(--clr-primary);
+}
+
+.secondary-cta:hover {
+    background-color: rgba(89, 208, 244, 0.1); /* Light primary background */
+    color: var(--clr-primary);
+}
+
+
+/* Hero Image */
+/* Imagen del Hero */
+.hero__image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+}
+
+.hero__avatar {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover;
+    border: 5px solid var(--clr-primary);
+    box-shadow: 0 0 20px rgba(89, 208, 244, 0.5); /* Matching shadow */
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+/* ============================================== */
+/* ABOUT SECTION STYLES */
+/* Estilos de la Sección ACERCA DE */
+.about__container {
+    display: flex;
+    justify-content: center;
+}
+
+.about__text {
+    max-width: 800px;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.about__text p {
+    margin-bottom: 1.5rem;
+    color: var(--clr-text-secondary);
+}
+
+.about__text strong, .about__text b {
+    color: var(--clr-primary);
+    font-weight: bold;
+}
+
+/* ============================================== */
+/* RESPONSIVE ADJUSTMENTS for Hero and About */
+/* Ajustes RESPONSIVOS para Hero y Acerca de */
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column-reverse; /* Put image above text on mobile/tablet */
+        text-align: center;
+        min-height: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .hero__content {
+        max-width: 100%;
+    }
+
+    .hero__title {
+        font-size: 2.5rem;
+    }
+    
+    .hero__descriptor {
+        font-size: 1.2rem;
+    }
+
+    .hero__image-container {
+        margin-bottom: 2rem;
+    }
+    
+    .hero__avatar {
+        max-width: 250px;
+    }
+    
+    .hero__cta-group {
+        justify-content: center;
+    }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .hero__descriptor {
+        font-size: 1rem;
+    }
+    
+    .hero__cta-group {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
