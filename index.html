@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nahuel G.L. | Portfolio Profesional</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__logo">
+            <img src="assets/logo.jpg" alt="Logo de Nahuel G.L." class="logo__img">
+        </div>
+        
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" data-section="home">Inicio</a></li>
+                <li class="nav__item"><a href="#about" data-section="about">Acerca de</a></li>
+                <li class="nav__item"><a href="#experience" data-section="experience">Experiencias</a></li>
+                <li class="nav__item"><a href="#education" data-section="education">Educación</a></li>
+                <li class="nav__item"><a href="#skills" data-section="skills">Habilidades</a></li>
+                <li class="nav__item"><a href="#projects" data-section="projects">Proyectos</a></li>
+                <li class="nav__item"><a href="#contact" data-section="contact">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="controls">
+            <button id="theme-toggle" class="control-btn" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            
+            <button id="lang-toggle" class="control-btn" aria-label="Alternar idioma">
+                <span class="lang-flag" data-lang="es">ES</span>
+                <span class="lang-flag hidden" data-lang="en">EN</span>
+            </button>
+        </div>
+
+        <button class="hamburger-menu" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <main class="main-content">
+        <section id="home" class="hero section"></section>
+        <section id="about" class="about section"></section>
+        <section id="experience" class="experience section"></section>
+        <section id="education" class="education section"></section>
+        <section id="skills" class="skills section"></section>
+        <section id="projects" class="projects section"></section>
+        <section id="contact" class="contact section"></section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

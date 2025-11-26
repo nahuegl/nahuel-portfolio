@@ -1,0 +1,252 @@
+/* -- Comentarios Bilingües: Bilingual Comments -- */
+
+/* Base Styles & Reset */
+/* Estilos Base y Reset */
+:root {
+    /* Color variables for Light and Dark Theme */
+    /* Variables de color para Tema Claro y Oscuro */
+    --clr-primary: #59d0f4; /* Cyan/Blue for accents and text */
+    --clr-secondary: #0087a3; /* Darker accent */
+    --clr-bg-dark: #121212; /* Dark background */
+    --clr-bg-light: #f4f4f4; /* Light background */
+    --clr-card-dark: #1f1f1f; /* Dark card background */
+    --clr-card-light: #ffffff; /* Light card background */
+    --clr-text-dark: #e0e0e0; /* Light text for dark theme */
+    --clr-text-light: #333333; /* Dark text for light theme */
+    --clr-text-secondary: #aaaaaa; /* Secondary text */
+    --clr-border: #333333; /* Border color */
+    
+    /* Font settings */
+    /* Configuración de fuentes */
+    --font-family-primary: 'Roboto', sans-serif;
+    --font-size-base: 16px;
+}
+
+/* Light Theme Variables (applied to body.light-theme) */
+/* Variables de Tema Claro (aplicadas a body.light-theme) */
+body.light-theme {
+    --clr-bg-dark: var(--clr-bg-light);
+    --clr-card-dark: var(--clr-card-light);
+    --clr-text-dark: var(--clr-text-light);
+    --clr-border: #cccccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--clr-text-dark);
+    background-color: var(--clr-bg-dark);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    color: var(--clr-primary);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ============================================== */
+/* HEADER STYLES */
+/* Estilos del Encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--clr-bg-dark);
+    border-bottom: 1px solid var(--clr-border);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__img {
+    height: 40px; /* Adjust size for visibility */
+    /* Adjustments for the specific logo style (hexagonal/tech) */
+    /* Ajustes para el estilo específico del logo (hexagonal/tecnológico) */
+    filter: drop-shadow(0 0 5px var(--clr-primary));
+}
+
+/* Navigation Menu */
+/* Menú de Navegación */
+.nav__list {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav__item a {
+    color: var(--clr-text-dark);
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+}
+
+.nav__item a:hover {
+    color: var(--clr-primary);
+    border-bottom: 2px solid var(--clr-primary);
+}
+
+/* Controls (Theme and Language) */
+/* Controles (Tema e Idioma) */
+.controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.control-btn {
+    background: none;
+    border: 2px solid var(--clr-primary);
+    color: var(--clr-primary);
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.control-btn:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-bg-dark);
+}
+
+.lang-flag {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Hamburger Menu (Hidden by default on Desktop) */
+/* Menú Hamburguesa (Oculto por defecto en Escritorio) */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--clr-text-dark);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ============================================== */
+/* GENERAL SECTION STYLES */
+/* Estilos Generales de Sección */
+.section {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--clr-primary);
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--clr-secondary);
+    margin: 0.5rem auto 0;
+}
+
+/* ============================================== */
+/* RESPONSIVE DESIGN (TABLET & MOBILE) */
+/* Diseño Responsivo (TABLET Y MÓVIL) */
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+    .header {
+        padding: 1rem 3%;
+    }
+
+    .nav {
+        /* Hide navigation on tablet/mobile */
+        /* Ocultar navegación en tablet/móvil */
+        display: none; 
+    }
+
+    .hamburger-menu {
+        display: block;
+        order: 3; /* Move hamburger button to the right */
+        color: var(--clr-primary);
+    }
+    
+    .controls {
+        order: 2; /* Keep controls in the middle */
+    }
+    
+    .header__logo {
+        order: 1; /* Keep logo on the left */
+    }
+
+    /* Show menu when open */
+    /* Mostrar menú cuando esté abierto */
+    .nav.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Below the header */
+        left: 0;
+        width: 100%;
+        background-color: var(--clr-bg-dark);
+        border-top: 1px solid var(--clr-border);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+        padding: 1rem 0;
+    }
+
+    .nav.open .nav__list {
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+    }
+
+    .nav.open .nav__item a {
+        display: block;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--clr-border);
+    }
+    
+    .nav.open .nav__item:last-child a {
+        border-bottom: none;
+    }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+    .section {
+        padding: 2rem 3%;
+    }
+    
+    .section h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+}
