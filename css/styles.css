@@ -638,3 +638,81 @@ ul {
         padding: 1rem;
     }
 }
+
+/* ============================================== */
+/* SKILLS SECTION STYLES */
+/* Estilos de la Sección HABILIDADES */
+
+.skills__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skills__category {
+    background-color: var(--clr-card-dark);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--clr-secondary); /* Top accent border */
+}
+
+.skills__subtitle {
+    font-size: 1.5rem;
+    color: var(--clr-text-dark);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.skills__list {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to next line */
+    justify-content: center;
+    gap: 1rem;
+}
+
+.skill-chip {
+    background-color: var(--clr-bg-dark);
+    color: var(--clr-text-dark);
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px; /* Pill shape */
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid var(--clr-border);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between icon and text */
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.skill-chip i {
+    color: var(--clr-primary);
+}
+
+/* Hover Effect */
+.skill-chip:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-bg-dark);
+    border-color: var(--clr-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(89, 208, 244, 0.3);
+}
+
+.skill-chip:hover i {
+    color: var(--clr-bg-dark); /* Icon turns dark on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .skills__category {
+        padding: 1.5rem;
+    }
+    
+    .skill-chip {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}
