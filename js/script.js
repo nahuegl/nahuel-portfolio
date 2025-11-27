@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "nav-contact": { es: "Contacto", en: "Contact" },
 
         // --- Hero Section ---
-        "hero-intro": { es: "¡Hola, soy Nahuel G.L.!", en: "Hi, I'm Nahuel G.L.!" },
+        "hero-intro": { es: "¡Hola, soy Nahuel Gonzalez!", en: "Hi, I'm Nahuel Gonzalez!" },
         "hero-title": { 
             es: "Construyendo soluciones en la <span class='highlight'>intersección de la Tecnología y el Análisis.</span>", 
             en: "Building solutions at the <span class='highlight'>intersection of Technology and Analysis.</span>" 
