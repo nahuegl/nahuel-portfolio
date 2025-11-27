@@ -58,6 +58,10 @@ body.light-theme {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth; /* Smooth scrolling between sections */
+}
+
 body {
     font-family: var(--font-family-primary);
     font-size: var(--font-size-base);
@@ -99,7 +103,7 @@ ul {
 }
 
 .logo__img {
-    height: 60px; /* Logo size adjusted */
+    height: 70px; /* Logo size updated to 70px */
     filter: drop-shadow(0 0 5px var(--clr-primary));
 }
 
@@ -146,6 +150,11 @@ ul {
 .control-btn:hover {
     background-color: var(--clr-primary);
     color: var(--clr-bg-dark);
+}
+
+/* Ensure controls are visible in light theme on hover */
+body.light-theme .control-btn:hover {
+    color: #fff;
 }
 
 .lang-flag {
