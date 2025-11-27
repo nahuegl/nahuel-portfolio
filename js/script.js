@@ -137,22 +137,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
     
+    // --- LOGO SWITCHING LOGIC ---
+    // 1. Select the logo element / Seleccionar el elemento del logo
+    const headerLogo = document.getElementById('header-logo');
+    // 2. Define paths for logos / Definir rutas para los logos
+    const darkLogoPath = 'assets/logo-dark.png';
+    const lightLogoPath = 'assets/logo-light.png';
+
+    // --- Initial Load / Carga Inicial ---
     const savedTheme = localStorage.getItem('theme') || 'dark';
     if (savedTheme === 'light') {
         body.classList.add('light-theme');
         themeToggle.querySelector('i').className = 'fas fa-sun';
+        // Set light logo / Establecer logo claro
+        headerLogo.src = lightLogoPath;
     } else {
         themeToggle.querySelector('i').className = 'fas fa-moon';
+        // Set dark logo (default) / Establecer logo oscuro (por defecto)
+        headerLogo.src = darkLogoPath;
     }
     
+    // --- Toggle Click Event / Evento de Clic del Interruptor ---
     themeToggle.addEventListener('click', () => {
         const isLightTheme = body.classList.toggle('light-theme');
         if (isLightTheme) {
             localStorage.setItem('theme', 'light');
             themeToggle.querySelector('i').className = 'fas fa-sun';
+            // Switch to light logo / Cambiar a logo claro
+            headerLogo.src = lightLogoPath;
         } else {
             localStorage.setItem('theme', 'dark');
             themeToggle.querySelector('i').className = 'fas fa-moon';
+            // Switch to dark logo / Cambiar a logo oscuro
+            headerLogo.src = darkLogoPath;
         }
     });
 
