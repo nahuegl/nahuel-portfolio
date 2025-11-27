@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
             es: "Construyendo soluciones en la <span class='highlight'>intersección de la Tecnología y el Análisis.</span>", 
             en: "Building solutions at the <span class='highlight'>intersection of Technology and Analysis.</span>" 
         },
-        // ** NEW: Array for Typewriter **
         "hero-phrases": {
             es: ["Desarrollo", "Tecnología", "Análisis de Datos", "Diseño UX/UI"],
             en: ["Development", "Technology", "Data Analysis", "UX/UI Design"]
@@ -46,6 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Experience Section ---
         "exp-title": { es: "Experiencia Laboral", en: "Work Experience" },
+        
+        // Roles & Titles (NEW)
+        "exp-role-pwc": { es: "Contact Center Specialist", en: "Contact Center Specialist" },
+        "exp-role-sancor": { es: "Analista de Operaciones y Procesos en Seguros", en: "Insurance Operations & Process Analyst" },
+        "exp-role-admin": { es: "Administrativo", en: "Administrative Assistant" },
+
         "exp-desc-pwc": {
             es: "Brindé soporte a clientes de Estados Unidos en temas fiscales relacionados con el Formulario K1, gestionando cuentas, verificando datos y resolviendo consultas con altos estándares de precisión y cumplimiento normativo. Mantener la calidad en CRM fue clave para cumplir métricas y garantizar una experiencia consistente. Durante mi gestión logré reducir los tiempos promedio de respuesta en torno al 20%, manteniendo simultáneamente un índice de satisfacción del 95%. Este rol reforzó mis habilidades analíticas, de comunicación y de adaptación en un entorno híbrido y altamente dinámico.",
             en: "Provided support to US clients on tax issues related to Form K1, managing accounts, verifying data, and resolving queries with high standards of accuracy and compliance. Maintaining quality in CRM was key to meeting metrics and ensuring a consistent experience. During my tenure, I managed to reduce average response times by around 20%, simultaneously maintaining a 95% satisfaction rate. This role reinforced my analytical, communication, and adaptability skills in a hybrid and highly dynamic environment."
@@ -67,6 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
         "edu-title": { es: "Educación y Certificaciones", en: "Education & Certifications" },
         "edu-subtitle": { es: "Educación Formal", en: "Formal Education" },
         "cert-subtitle": { es: "Certificaciones", en: "Certifications" },
+
+        // Degrees (NEW)
+        "edu-role-tech": { es: "Certified Tech Developer", en: "Certified Tech Developer" },
+        "edu-role-web": { es: "Diseño Web", en: "Web Design" },
+        "edu-role-multi": { es: "Licenciatura en Diseño Multimedial", en: "Bachelor's in Multimedia Design" },
+
         "edu-desc-dh": {
             es: "Formación intensiva en desarrollo de software orientada a programación, bases de datos, arquitectura web, UX/UI y metodologías ágiles. El programa se centró en la creación de soluciones digitales modernas con enfoque en escalabilidad, diseño y resolución de problemas complejos.",
             en: "Intensive training in software development oriented towards programming, databases, web architecture, UX/UI, and agile methodologies. The program focused on creating modern digital solutions with a focus on scalability, design, and complex problem-solving."
@@ -97,10 +108,34 @@ document.addEventListener('DOMContentLoaded', () => {
         "skills-prof": { es: "Profesionales y Gestión", en: "Professional & Management" },
         "skills-tech": { es: "Tecnología y Desarrollo", en: "Technology & Development" },
 
+        // Skill Chips (NEW)
+        "skill-cust": { es: "<i class='fas fa-users'></i> Atención al Cliente", en: "<i class='fas fa-users'></i> Customer Service" },
+        "skill-analysis": { es: "<i class='fas fa-chart-line'></i> Análisis de Procesos", en: "<i class='fas fa-chart-line'></i> Process Analysis" },
+        "skill-comms": { es: "<i class='fas fa-comments'></i> Comunicación Efectiva", en: "<i class='fas fa-comments'></i> Effective Communication" },
+        "skill-team": { es: "<i class='fas fa-hands-helping'></i> Trabajo en Equipo", en: "<i class='fas fa-hands-helping'></i> Teamwork" },
+        "skill-doc": { es: "<i class='fas fa-file-alt'></i> Gestión Documental", en: "<i class='fas fa-file-alt'></i> Document Management" },
+        "skill-norm": { es: "<i class='fas fa-balance-scale'></i> Cumplimiento Normativo", en: "<i class='fas fa-balance-scale'></i> Regulatory Compliance" },
+        "skill-prob": { es: "<i class='fas fa-lightbulb'></i> Resolución de Problemas", en: "<i class='fas fa-lightbulb'></i> Problem Solving" },
+        "skill-proj": { es: "<i class='fas fa-tasks'></i> Gestión de Proyectos", en: "<i class='fas fa-tasks'></i> Project Management" },
+        
+        "skill-dev": { es: "<i class='fas fa-laptop-code'></i> Desarrollo Web", en: "<i class='fas fa-laptop-code'></i> Web Development" },
+        "skill-db": { es: "<i class='fas fa-database'></i> Bases de Datos", en: "<i class='fas fa-database'></i> Databases" },
+        "skill-ux": { es: "<i class='fas fa-pencil-ruler'></i> UX/UI Design", en: "<i class='fas fa-pencil-ruler'></i> UX/UI Design" },
+        "skill-data": { es: "<i class='fas fa-search-dollar'></i> Análisis de Datos", en: "<i class='fas fa-search-dollar'></i> Data Analysis" },
+        "skill-ai": { es: "<i class='fas fa-robot'></i> Inteligencia Artificial (IA)", en: "<i class='fas fa-robot'></i> Artificial Intelligence (AI)" },
+
         // --- Projects Section ---
         "projects-title": { es: "Proyectos Destacados", en: "Featured Projects" },
         "projects-subtitle": { es: "Explora algunos de los desarrollos en los que estoy trabajando actualmente.", en: "Explore some of the developments I am currently working on." },
         "status-wip": { es: "En Construcción", en: "Work in Progress" },
+        "btn-code": { es: "Ver Código", en: "View Code" }, // NEW
+
+        // Projects Titles (NEW)
+        "proj-title-port": { es: "Portfolio Personal", en: "Personal Portfolio" },
+        "proj-title-sys": { es: "Sistema de Gestión", en: "Management System" },
+        "proj-title-dash": { es: "Dashboard Financiero", en: "Financial Dashboard" },
+        "proj-title-app": { es: "App de Servicios", en: "Services App" },
+
         "proj-desc-portfolio": {
             es: "Diseño y desarrollo de este sitio web personal para presentar mi perfil profesional. Enfocado en diseño responsivo, modo oscuro/claro y accesibilidad.",
             en: "Design and development of this personal website to present my professional profile. Focused on responsive design, dark/light mode, and accessibility."
