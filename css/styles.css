@@ -3,18 +3,29 @@
 /* Base Styles & Reset */
 /* Estilos Base y Reset */
 :root {
-    /* Color variables for Light and Dark Theme */
-    /* Variables de color para Tema Claro y Oscuro */
-    --clr-primary: #59d0f4; /* Cyan/Blue for accents and text */
-    --clr-secondary: #0087a3; /* Darker accent */
-    --clr-bg-dark: #121212; /* Dark background */
-    --clr-bg-light: #f4f4f4; /* Light background */
-    --clr-card-dark: #1f1f1f; /* Dark card background */
-    --clr-card-light: #ffffff; /* Light card background */
-    --clr-text-dark: #e0e0e0; /* Light text for dark theme */
-    --clr-text-light: #333333; /* Dark text for light theme */
-    --clr-text-secondary: #aaaaaa; /* Secondary text */
-    --clr-border: #333333; /* Border color */
+    /* --- PALETA DEEP SEA (Color Palette) --- */
+    --deep-sea-black: #0D1B2A;  /* Darkest Blue/Black */
+    --deep-sea-navy:  #1B263B;  /* Navy Blue */
+    --deep-sea-muted: #415A77;  /* Muted Blue */
+    --deep-sea-steel: #778DA9;  /* Steel Blue (Accent) */
+    --deep-sea-bone:  #E0E1DD;  /* Bone/Light Grey */
+
+    /* --- DARK THEME MAPPINGS (DEFAULT) --- */
+    /* Mapeo del Tema Oscuro (Por defecto) */
+    
+    /* Backgrounds */
+    --clr-bg-dark: var(--deep-sea-black);
+    --clr-card-dark: var(--deep-sea-navy);
+    
+    /* Text */
+    --clr-text-dark: var(--deep-sea-bone);       /* Light text for dark bg */
+    --clr-text-light: var(--deep-sea-black);     /* Dark text definition */
+    --clr-text-secondary: var(--deep-sea-steel); /* Softer text for subtitles */
+    
+    /* Accents & Borders */
+    --clr-primary: var(--deep-sea-steel);        /* Main accent color (Bright) */
+    --clr-secondary: var(--deep-sea-muted);      /* Secondary accent */
+    --clr-border: var(--deep-sea-muted);         /* Border color */
     
     /* Font settings */
     /* Configuración de fuentes */
@@ -22,12 +33,22 @@
     --font-size-base: 16px;
 }
 
-/* Light Theme Variables (applied to body.light-theme) */
-/* Variables de Tema Claro (aplicadas a body.light-theme) */
+/* --- LIGHT THEME MAPPINGS --- */
+/* Mapeo del Tema Claro */
 body.light-theme {
-    --clr-bg-dark: var(--clr-bg-light);
-    --clr-card-dark: var(--clr-card-light);
-    --clr-text-dark: var(--clr-text-light);
+    /* Invertimos la lógica para garantizar contraste / Invert logic for contrast */
+    
+    /* Backgrounds */
+    --clr-bg-dark: var(--deep-sea-bone);       /* Light background */
+    --clr-card-dark: #FFFFFF;                  /* Pure white cards for contrast */
+    
+    /* Text */
+    --clr-text-dark: var(--deep-sea-black);    /* Dark text for light bg */
+    --clr-text-secondary: var(--deep-sea-muted);
+    
+    /* Accents & Borders */
+    --clr-primary: var(--deep-sea-navy);       /* Darker accent for visibility on light */
+    --clr-secondary: var(--deep-sea-steel);
     --clr-border: #cccccc;
 }
 
@@ -78,7 +99,7 @@ ul {
 }
 
 .logo__img {
-    height: 60px; /* <--- CAMBIO AQUÍ: Antes era 40px */
+    height: 60px; /* Logo size adjusted */
     filter: drop-shadow(0 0 5px var(--clr-primary));
 }
 
@@ -202,7 +223,8 @@ ul {
 
 .highlight {
     color: var(--clr-primary);
-    text-shadow: 0 0 5px rgba(89, 208, 244, 0.5); 
+    /* Soft glow matching the primary accent */
+    text-shadow: 0 0 10px rgba(119, 141, 169, 0.3); 
 }
 
 .hero__descriptor {
@@ -237,6 +259,7 @@ ul {
 .primary-cta:hover {
     background-color: var(--clr-secondary);
     border-color: var(--clr-secondary);
+    color: #fff; /* Ensure white text on hover */
 }
 
 .secondary-cta {
@@ -246,7 +269,7 @@ ul {
 }
 
 .secondary-cta:hover {
-    background-color: rgba(89, 208, 244, 0.1);
+    background-color: rgba(119, 141, 169, 0.1); /* Low opacity steel blue */
     color: var(--clr-primary);
 }
 
@@ -264,7 +287,7 @@ ul {
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid var(--clr-primary);
-    box-shadow: 0 0 20px rgba(89, 208, 244, 0.5);
+    box-shadow: 0 0 20px rgba(119, 141, 169, 0.4); /* Glow matching palette */
     transition: border 0.3s, box-shadow 0.3s;
 }
 
@@ -356,13 +379,13 @@ ul {
 }
 
 .skill-tag {
-    background-color: rgba(89, 208, 244, 0.1);
+    background-color: rgba(119, 141, 169, 0.1); /* Steel blue with opacity */
     color: var(--clr-primary);
     padding: 0.25rem 0.75rem;
     border-radius: 15px;
     font-size: 0.85rem;
     font-weight: 500;
-    border: 1px solid rgba(89, 208, 244, 0.3);
+    border: 1px solid rgba(119, 141, 169, 0.3);
 }
 
 /* ============================================== */
@@ -396,7 +419,12 @@ ul {
 }
 
 .edu__card:hover {
-    background-color: var(--clr-border);
+    background-color: var(--clr-border); /* Slightly lighter/different bg on hover */
+}
+
+/* In Light mode, hover effect needs adjustment */
+body.light-theme .edu__card:hover {
+    background-color: #f0f0f0;
 }
 
 .edu__program {
@@ -529,11 +557,19 @@ ul {
     color: var(--clr-bg-dark);
     border-color: var(--clr-primary);
     transform: translateY(-3px);
-    box-shadow: 0 5px 10px rgba(89, 208, 244, 0.3);
+    box-shadow: 0 5px 10px rgba(119, 141, 169, 0.3);
 }
 
 .skill-chip:hover i {
     color: var(--clr-bg-dark);
+}
+
+/* Light mode hover specific adjustment */
+body.light-theme .skill-chip:hover {
+    color: #fff; /* White text on dark navy hover */
+}
+body.light-theme .skill-chip:hover i {
+    color: #fff;
 }
 
 /* ============================================== */
@@ -568,7 +604,7 @@ ul {
 }
 
 .project__status {
-    background-color: #ffc107;
+    background-color: #ffc107; /* Amber for status remains good */
     color: #333;
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
@@ -735,7 +771,7 @@ ul {
 .form__group textarea:focus {
     outline: none;
     border-color: var(--clr-primary);
-    box-shadow: 0 0 5px rgba(89, 208, 244, 0.3);
+    box-shadow: 0 0 5px rgba(119, 141, 169, 0.3);
 }
 
 /* ============================================== */
@@ -776,7 +812,7 @@ ul {
 }
 
 /* ============================================== */
-/* RESPONSIVE DESIGN (TABLET & MOBILE) */
+/* RESPONSIVE DESIGN */
 
 /* Tablet (max-width: 992px) */
 @media (max-width: 992px) {
@@ -864,7 +900,7 @@ ul {
     }
 }
 
-/* Mobile (max-width: 768px - Contact Section Breakpoint) */
+/* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
     .contact__container {
         flex-direction: column;
