@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     // ==========================================
-    // 1. TRANSLATIONS DICTIONARY / DICCIONARIO DE TRADUCCIONES
+    // 1. TRANSLATIONS DICTIONARY
     // ==========================================
     const translations = {
         // --- Navigation ---
@@ -21,11 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
             es: "Construyendo soluciones en la <span class='highlight'>intersección de la Tecnología y el Análisis.</span>", 
             en: "Building solutions at the <span class='highlight'>intersection of Technology and Analysis.</span>" 
         },
-        "hero-descriptor": { es: "Desarrollo | Tecnología | Análisis | Diseño UX/UI", en: "Development | Technology | Analysis | UX/UI Design" },
+        // ** NEW: Array for Typewriter **
+        "hero-phrases": {
+            es: ["Desarrollo", "Tecnología", "Análisis de Datos", "Diseño UX/UI"],
+            en: ["Development", "Technology", "Data Analysis", "UX/UI Design"]
+        },
         "cta-contact": { es: "Contáctame", en: "Contact Me" },
         "cta-cv": { es: "Descargar CV <i class='fas fa-download'></i>", en: "Download CV <i class='fas fa-download'></i>" },
 
-        // --- About Section (Nota: Usamos <strong> en lugar de asteriscos) ---
+        // --- About Section ---
         "about-title": { es: "Acerca de Mí", en: "About Me" },
         "about-p1": { 
             es: "Soy un profesional impulsado por la <strong>tecnología, el análisis de procesos y la búsqueda de la excelencia</strong> en el servicio. Mi trayectoria combina años de experiencia en roles altamente regulados, donde la precisión, el cumplimiento normativo y la atención al cliente corporativo fueron pilares, con una formación intensiva en desarrollo de software y diseño UX/UI.", 
@@ -42,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Experience Section ---
         "exp-title": { es: "Experiencia Laboral", en: "Work Experience" },
-        
         "exp-desc-pwc": {
             es: "Brindé soporte a clientes de Estados Unidos en temas fiscales relacionados con el Formulario K1, gestionando cuentas, verificando datos y resolviendo consultas con altos estándares de precisión y cumplimiento normativo. Mantener la calidad en CRM fue clave para cumplir métricas y garantizar una experiencia consistente. Durante mi gestión logré reducir los tiempos promedio de respuesta en torno al 20%, manteniendo simultáneamente un índice de satisfacción del 95%. Este rol reforzó mis habilidades analíticas, de comunicación y de adaptación en un entorno híbrido y altamente dinámico.",
             en: "Provided support to US clients on tax issues related to Form K1, managing accounts, verifying data, and resolving queries with high standards of accuracy and compliance. Maintaining quality in CRM was key to meeting metrics and ensuring a consistent experience. During my tenure, I managed to reduce average response times by around 20%, simultaneously maintaining a 95% satisfaction rate. This role reinforced my analytical, communication, and adaptability skills in a hybrid and highly dynamic environment."
@@ -64,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "edu-title": { es: "Educación y Certificaciones", en: "Education & Certifications" },
         "edu-subtitle": { es: "Educación Formal", en: "Formal Education" },
         "cert-subtitle": { es: "Certificaciones", en: "Certifications" },
-
         "edu-desc-dh": {
             es: "Formación intensiva en desarrollo de software orientada a programación, bases de datos, arquitectura web, UX/UI y metodologías ágiles. El programa se centró en la creación de soluciones digitales modernas con enfoque en escalabilidad, diseño y resolución de problemas complejos.",
             en: "Intensive training in software development oriented towards programming, databases, web architecture, UX/UI, and agile methodologies. The program focused on creating modern digital solutions with a focus on scalability, design, and complex problem-solving."
@@ -99,7 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "projects-title": { es: "Proyectos Destacados", en: "Featured Projects" },
         "projects-subtitle": { es: "Explora algunos de los desarrollos en los que estoy trabajando actualmente.", en: "Explore some of the developments I am currently working on." },
         "status-wip": { es: "En Construcción", en: "Work in Progress" },
-        
         "proj-desc-portfolio": {
             es: "Diseño y desarrollo de este sitio web personal para presentar mi perfil profesional. Enfocado en diseño responsivo, modo oscuro/claro y accesibilidad.",
             en: "Design and development of this personal website to present my professional profile. Focused on responsive design, dark/light mode, and accessibility."
@@ -132,56 +133,90 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // ==========================================
-    // 2. THEME LOGIC / LÓGICA DEL TEMA
+    // 2. THEME & LOGO LOGIC
     // ==========================================
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
-    
-    // --- LOGO SWITCHING LOGIC ---
-    // 1. Select the logo element / Seleccionar el elemento del logo
     const headerLogo = document.getElementById('header-logo');
-    // 2. Define paths for logos / Definir rutas para los logos
     const darkLogoPath = 'assets/logo-dark.png';
     const lightLogoPath = 'assets/logo-light.png';
 
-    // --- Initial Load / Carga Inicial ---
     const savedTheme = localStorage.getItem('theme') || 'dark';
     if (savedTheme === 'light') {
         body.classList.add('light-theme');
         themeToggle.querySelector('i').className = 'fas fa-sun';
-        // Set light logo / Establecer logo claro
         headerLogo.src = lightLogoPath;
     } else {
         themeToggle.querySelector('i').className = 'fas fa-moon';
-        // Set dark logo (default) / Establecer logo oscuro (por defecto)
         headerLogo.src = darkLogoPath;
     }
     
-    // --- Toggle Click Event / Evento de Clic del Interruptor ---
     themeToggle.addEventListener('click', () => {
         const isLightTheme = body.classList.toggle('light-theme');
         if (isLightTheme) {
             localStorage.setItem('theme', 'light');
             themeToggle.querySelector('i').className = 'fas fa-sun';
-            // Switch to light logo / Cambiar a logo claro
             headerLogo.src = lightLogoPath;
         } else {
             localStorage.setItem('theme', 'dark');
             themeToggle.querySelector('i').className = 'fas fa-moon';
-            // Switch to dark logo / Cambiar a logo oscuro
             headerLogo.src = darkLogoPath;
         }
     });
 
     // ==========================================
-    // 3. LANGUAGE LOGIC / LÓGICA DEL IDIOMA
+    // 3. LANGUAGE & TYPEWRITER LOGIC
     // ==========================================
     const langToggle = document.getElementById('lang-toggle');
     const langFlags = document.querySelectorAll('.lang-flag');
     let currentLang = 'es'; 
 
+    // --- Typewriter Variables ---
+    const typewriterElement = document.getElementById('typewriter');
+    let typeWriterInterval;
+    let typeWriterTimeout;
+    
+    const startTypewriter = (lang) => {
+        // Clear existing timers
+        clearInterval(typeWriterInterval);
+        clearTimeout(typeWriterTimeout);
+
+        const words = translations["hero-phrases"][lang];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        const type = () => {
+            const currentWord = words[wordIndex];
+            
+            if (isDeleting) {
+                typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                // Word complete, pause then delete
+                isDeleting = true;
+                typeWriterTimeout = setTimeout(type, 2000); 
+            } else if (isDeleting && charIndex === 0) {
+                // Deletion complete, move to next word
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeWriterTimeout = setTimeout(type, 500);
+            } else {
+                // Continue typing/deleting
+                const speed = isDeleting ? 50 : 100;
+                typeWriterTimeout = setTimeout(type, speed);
+            }
+        };
+
+        type();
+    };
+
     const updateLangDisplay = (lang) => {
-        // Update Flag / Actualizar Bandera
         langFlags.forEach(flag => {
             if (flag.getAttribute('data-lang') === lang) {
                 flag.classList.remove('hidden');
@@ -190,11 +225,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Update Text Content / Actualizar Contenido de Texto
         document.querySelectorAll('[data-lang-key]').forEach(element => {
             const key = element.getAttribute('data-lang-key');
             if (translations[key] && translations[key][lang]) {
-                // Check if the content contains HTML tags (like <span> or <strong>)
                 if (translations[key][lang].includes('<')) {
                     element.innerHTML = translations[key][lang];
                 } else {
@@ -202,6 +235,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
+
+        // Restart Typewriter with new language
+        startTypewriter(lang);
     };
 
     langToggle.addEventListener('click', () => {
@@ -210,8 +246,34 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.lang = currentLang;
     });
 
+    // Initialize Typewriter
+    startTypewriter(currentLang);
+
+
     // ==========================================
-    // 4. MOBILE MENU / MENÚ MÓVIL
+    // 4. SCROLL REVEAL ANIMATION
+    // ==========================================
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
+        const elementVisible = 150; // Distance from bottom
+
+        revealElements.forEach((element) => {
+            const elementTop = element.getBoundingClientRect().top;
+            if (elementTop < windowHeight - elementVisible) {
+                element.classList.add('active');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    // Trigger once on load
+    revealOnScroll();
+
+
+    // ==========================================
+    // 5. MOBILE MENU
     // ==========================================
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const navMenu = document.querySelector('.nav');
