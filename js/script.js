@@ -46,11 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // --- Experience Section ---
         "exp-title": { es: "Experiencia Laboral", en: "Work Experience" },
         
-        // Roles & Titles (NEW)
+        // Roles & Titles
         "exp-role-pwc": { es: "Contact Center Specialist", en: "Contact Center Specialist" },
         "exp-role-sancor": { es: "Analista de Operaciones y Procesos en Seguros", en: "Insurance Operations & Process Analyst" },
         "exp-role-admin": { es: "Administrativo", en: "Administrative Assistant" },
 
+        // Descriptions
         "exp-desc-pwc": {
             es: "Brindé soporte a clientes de Estados Unidos en temas fiscales relacionados con el Formulario K1, gestionando cuentas, verificando datos y resolviendo consultas con altos estándares de precisión y cumplimiento normativo. Mantener la calidad en CRM fue clave para cumplir métricas y garantizar una experiencia consistente. Durante mi gestión logré reducir los tiempos promedio de respuesta en torno al 20%, manteniendo simultáneamente un índice de satisfacción del 95%. Este rol reforzó mis habilidades analíticas, de comunicación y de adaptación en un entorno híbrido y altamente dinámico.",
             en: "Provided support to US clients on tax issues related to Form K1, managing accounts, verifying data, and resolving queries with high standards of accuracy and compliance. Maintaining quality in CRM was key to meeting metrics and ensuring a consistent experience. During my tenure, I managed to reduce average response times by around 20%, simultaneously maintaining a 95% satisfaction rate. This role reinforced my analytical, communication, and adaptability skills in a hybrid and highly dynamic environment."
@@ -68,16 +69,38 @@ document.addEventListener('DOMContentLoaded', () => {
             en: "Provided legal-administrative support in court files, organized legal documentation, and collaborated with legal teams in processing cases. Attention to detail and handling of regulatory standards were essential in my daily work."
         },
 
+        // Tags inside Experience Cards (NEW)
+        "tag-cust-corp": { es: "Atención al cliente corporativo", en: "Corporate Customer Service" },
+        "tag-doc-mgmt": { es: "Gestión documental", en: "Document Management" },
+        "tag-query-res": { es: "Resolución de consultas", en: "Inquiry Resolution" },
+        "tag-compliance": { es: "Cumplimiento normativo", en: "Regulatory Compliance" },
+        
+        "tag-claims": { es: "Gestión de siniestros", en: "Claims Management" },
+        "tag-coord": { es: "Coordinación con peritos", en: "Adjuster Coordination" },
+        "tag-proc-opt": { es: "Optimización de procesos", en: "Process Optimization" },
+        "tag-digit": { es: "Digitalización", en: "Digitization" },
+        "tag-claims-res": { es: "Resolución de reclamos", en: "Claims Resolution" },
+        
+        "tag-legal-doc": { es: "Gestión documentación legal", en: "Legal Document Management" },
+        "tag-cust-serv": { es: "Atención al público", en: "Customer Service" },
+        "tag-bank-reg": { es: "Normativas bancarias", en: "Banking Regulations" },
+        
+        "tag-legal-supp": { es: "Apoyo legal-administrativo", en: "Legal-Administrative Support" },
+        "tag-jud-doc": { es: "Documentación jurídica", en: "Legal Documentation" },
+        "tag-teamwork": { es: "Trabajo en equipo", en: "Teamwork" },
+
+
         // --- Education Section ---
         "edu-title": { es: "Educación y Certificaciones", en: "Education & Certifications" },
         "edu-subtitle": { es: "Educación Formal", en: "Formal Education" },
         "cert-subtitle": { es: "Certificaciones", en: "Certifications" },
 
-        // Degrees (NEW)
+        // Degrees
         "edu-role-tech": { es: "Certified Tech Developer", en: "Certified Tech Developer" },
         "edu-role-web": { es: "Diseño Web", en: "Web Design" },
         "edu-role-multi": { es: "Licenciatura en Diseño Multimedial", en: "Bachelor's in Multimedia Design" },
 
+        // Descriptions
         "edu-desc-dh": {
             es: "Formación intensiva en desarrollo de software orientada a programación, bases de datos, arquitectura web, UX/UI y metodologías ágiles. El programa se centró en la creación de soluciones digitales modernas con enfoque en escalabilidad, diseño y resolución de problemas complejos.",
             en: "Intensive training in software development oriented towards programming, databases, web architecture, UX/UI, and agile methodologies. The program focused on creating modern digital solutions with a focus on scalability, design, and complex problem-solving."
@@ -90,6 +113,19 @@ document.addEventListener('DOMContentLoaded', () => {
             es: "Estudios en diseño gráfico, comunicación visual, creatividad aplicada y producción audiovisual. Formación estética, conceptual y técnica dentro de entornos digitales.",
             en: "Studies in graphic design, visual communication, applied creativity, and audiovisual production. Aesthetic, conceptual, and technical training within digital environments."
         },
+
+        // Tags inside Education Cards (NEW)
+        "tag-soft-dev": { es: "Desarrollo de Software", en: "Software Development" },
+        "tag-web-arch": { es: "Arquitectura Web", en: "Web Architecture" },
+        "tag-uxui": { es: "UX/UI", en: "UX/UI" },
+        
+        "tag-markup": { es: "Maquetación Web", en: "Web Layout" },
+        "tag-responsive": { es: "Responsive Design", en: "Responsive Design" },
+        
+        "tag-design": { es: "Diseño Gráfico", en: "Graphic Design" },
+        "tag-visual-comm": { es: "Comunicación Visual", en: "Visual Communication" },
+
+        // Certifications Descriptions
         "cert-desc-microsoft": {
             es: "Conjunto de certificaciones que abarcan seguridad en la nube, administración de sistemas, desarrollo de software, análisis de datos, IA generativa y productividad con Microsoft Copilot. El foco está en la aplicación práctica de la IA y la tecnología para resolver problemas de negocio y mejorar procesos.",
             en: "Set of certifications covering cloud security, systems administration, software development, data analysis, generative AI, and productivity with Microsoft Copilot. The focus is on the practical application of AI and technology to solve business problems and improve processes."
@@ -108,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "skills-prof": { es: "Profesionales y Gestión", en: "Professional & Management" },
         "skills-tech": { es: "Tecnología y Desarrollo", en: "Technology & Development" },
 
-        // Skill Chips (NEW)
+        // Skill Chips
         "skill-cust": { es: "<i class='fas fa-users'></i> Atención al Cliente", en: "<i class='fas fa-users'></i> Customer Service" },
         "skill-analysis": { es: "<i class='fas fa-chart-line'></i> Análisis de Procesos", en: "<i class='fas fa-chart-line'></i> Process Analysis" },
         "skill-comms": { es: "<i class='fas fa-comments'></i> Comunicación Efectiva", en: "<i class='fas fa-comments'></i> Effective Communication" },
@@ -128,9 +164,9 @@ document.addEventListener('DOMContentLoaded', () => {
         "projects-title": { es: "Proyectos Destacados", en: "Featured Projects" },
         "projects-subtitle": { es: "Explora algunos de los desarrollos en los que estoy trabajando actualmente.", en: "Explore some of the developments I am currently working on." },
         "status-wip": { es: "En Construcción", en: "Work in Progress" },
-        "btn-code": { es: "Ver Código", en: "View Code" }, // NEW
+        "btn-code": { es: "Ver Código", en: "View Code" },
 
-        // Projects Titles (NEW)
+        // Projects Titles
         "proj-title-port": { es: "Portfolio Personal", en: "Personal Portfolio" },
         "proj-title-sys": { es: "Sistema de Gestión", en: "Management System" },
         "proj-title-dash": { es: "Dashboard Financiero", en: "Financial Dashboard" },
