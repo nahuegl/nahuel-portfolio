@@ -350,12 +350,14 @@ body.light-theme .control-btn:hover {
     max-width: 400px;
 }
 
+/* CORRECCIÓN DEL AVATAR */
 .hero__avatar {
     width: 100%;
     max-width: 350px;
-    height: auto;
+    /* height: auto;  <-- Eliminado para evitar deformación */
+    aspect-ratio: 1 / 1; /* <-- Fuerza una relación de aspecto cuadrada */
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: cover; /* <-- Asegura que la imagen rellene el círculo sin estirarse */
     border: 5px solid var(--clr-primary);
     box-shadow: 0 0 20px rgba(119, 141, 169, 0.4);
     transition: border 0.3s, box-shadow 0.3s;
