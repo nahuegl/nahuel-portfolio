@@ -356,7 +356,14 @@ body.light-theme .control-btn:hover {
     max-width: 450px; 
     aspect-ratio: 1 / 1; 
     border-radius: 50%;
+    
+    /* Mantiene la proporción y rellena el círculo */
     object-fit: cover; 
+    
+    /* AJUSTE DE CENTRADO: */
+    /* Movemos el foco un poco a la derecha (60%) para centrar tu rostro */
+    object-position: 60% center; 
+    
     border: 5px solid var(--clr-primary);
     box-shadow: 0 0 20px rgba(119, 141, 169, 0.4);
     transition: border 0.3s, box-shadow 0.3s;
