@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             en: "Provided legal-administrative support in court files, organized legal documentation, and collaborated with legal teams in processing cases. Attention to detail and handling of regulatory standards were essential in my daily work."
         },
 
-        // Tags inside Experience Cards (NEW)
+        // Tags inside Experience Cards
         "tag-cust-corp": { es: "Atención al cliente corporativo", en: "Corporate Customer Service" },
         "tag-doc-mgmt": { es: "Gestión documental", en: "Document Management" },
         "tag-query-res": { es: "Resolución de consultas", en: "Inquiry Resolution" },
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
             en: "Studies in graphic design, visual communication, applied creativity, and audiovisual production. Aesthetic, conceptual, and technical training within digital environments."
         },
 
-        // Tags inside Education Cards (NEW)
+        // Tags inside Education Cards
         "tag-soft-dev": { es: "Desarrollo de Software", en: "Software Development" },
         "tag-web-arch": { es: "Arquitectura Web", en: "Web Architecture" },
         "tag-uxui": { es: "UX/UI", en: "UX/UI" },
