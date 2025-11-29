@@ -347,17 +347,16 @@ body.light-theme .control-btn:hover {
     flex: 1;
     display: flex;
     justify-content: center;
-    max-width: 400px;
+    max-width: 550px; 
 }
 
 /* CORRECCIÓN DEL AVATAR */
 .hero__avatar {
     width: 100%;
-    max-width: 350px;
-    /* height: auto;  <-- Eliminado para evitar deformación */
-    aspect-ratio: 1 / 1; /* <-- Fuerza una relación de aspecto cuadrada */
+    max-width: 450px; 
+    aspect-ratio: 1 / 1; 
     border-radius: 50%;
-    object-fit: cover; /* <-- Asegura que la imagen rellene el círculo sin estirarse */
+    object-fit: cover; 
     border: 5px solid var(--clr-primary);
     box-shadow: 0 0 20px rgba(119, 141, 169, 0.4);
     transition: border 0.3s, box-shadow 0.3s;
