@@ -171,6 +171,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "proj-title-sys": { es: "Sistema de Gestión", en: "Management System" },
         "proj-title-dash": { es: "Dashboard Financiero", en: "Financial Dashboard" },
         "proj-title-app": { es: "App de Servicios", en: "Services App" },
+        
+        // NEW PROJECTS
+        "proj-title-powerbi": { es: "Business Analytics", en: "Business Analytics" },
+        "proj-title-figma": { es: "Diseño UX/UI", en: "UX/UI Design" },
 
         "proj-desc-portfolio": {
             es: "Diseño y desarrollo de este sitio web personal para presentar mi perfil profesional. Enfocado en diseño responsivo, modo oscuro/claro y accesibilidad.",
@@ -187,6 +191,16 @@ document.addEventListener('DOMContentLoaded', () => {
         "proj-desc-app": {
             es: "Plataforma conceptual para conectar usuarios con proveedores de servicios locales. Proyecto académico enfocado en la experiencia de usuario (UX).",
             en: "Conceptual platform to connect users with local service providers. Academic project focused on user experience (UX)."
+        },
+        
+        // NEW DESCRIPTIONS
+        "proj-desc-powerbi": {
+            es: "Tablero interactivo para inteligencia de negocios. Análisis de KPIs, modelado de datos y visualización estratégica para la toma de decisiones.",
+            en: "Interactive dashboard for business intelligence. KPI analysis, data modeling, and strategic visualization for decision-making."
+        },
+        "proj-desc-figma": {
+            es: "Prototipo de alta fidelidad y sistema de diseño. Enfoque en arquitectura de la información, flujos de usuario y diseño de interfaces accesibles.",
+            en: "High-fidelity prototype and design system. Focus on information architecture, user flows, and accessible interface design."
         },
 
         // --- Contact Section & Footer ---
